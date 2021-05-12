@@ -31,7 +31,6 @@ let getLucky = function() {
 
 let youWin = function() {
   if (luckyCell.length == 0) {
-    console.log('Bag');
     clearInterval(timerS);
     alert('You WIN!');
     status = 'over';
@@ -47,7 +46,6 @@ let youLose = function() {
 let start = function () {
   startTimer();
   getLucky();
-  console.log(luckyCell);
     for (let td of tds) {
       td.addEventListener('click', function cl() {
         if (luckyCell.indexOf(this) !== -1 && luckyCell.length !== 0 && status === 'play') {
